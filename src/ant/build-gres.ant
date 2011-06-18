@@ -34,10 +34,13 @@ under the License.
     </target>
 
     <target name="build-tests" depends="init">
-        <copydir dest="${basedir}/tmp/bad-suite1" src="${basedir}/test/ant/bad-suite1"/>
-        <copydir dest="${basedir}/tmp/suite1" src="${basedir}/test/ant/suite1"/>
+        <copy todir="${basedir}/tmp/bad-suite1">
+            <fileset dir="${basedir}/test/ant/bad-suite1"/>
+        </copy>
+        <copy todir="${basedir}/tmp/suite1">
+            <fileset dir="${basedir}/test/ant/suite1"/>
+        </copy>
     </target>
-
 
 
 </project>
